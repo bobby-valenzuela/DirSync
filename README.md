@@ -28,6 +28,9 @@
    chmod +x dirsync.sh
    ```
 
+<br />  
+
+
 ## Configuration
 Edit the `dirsync.sh` script to set the following configuration variables:
 
@@ -54,8 +57,12 @@ Host myremotevm-001
     IdentityFile ~/.ssh/id_rsa
 ```
 
+<br />  
+
 ## Usage
 Run the script from the command line, specifying the local directory name and the remote host alias defined in your SSH config.
+
+<br />  
 
 ### One-Time Sync
 To sync the local directory to the remote directory once:
@@ -66,6 +73,8 @@ To sync the local directory to the remote directory once:
 
 This syncs `/home/bobby/working/mylocaldir` to `/home/ubuntu/final/mylocaldir` on `myremotevm-001`.
 
+<br />  
+
 ### Continuous Sync
 To enable continuous synchronization (checks for changes every `NAP_TIME` seconds):
 
@@ -73,17 +82,29 @@ To enable continuous synchronization (checks for changes every `NAP_TIME` second
 ./dirsync.sh mylocaldir myremotevm-001 ongoing
 ```
 
-The script will monitor the local directory and push updates to the remote directory as changes occur (as detected by changes in file size).
+<br />
+
+The script will monitor the local directory and push updates to the remote directory as changes occur (as detected by changes in file size).  
+You can also use a single dot to refer to set the current dir as the dir to be synced:
+```bash
+./dirsync.sh . myremotevm-001 # If we're in the 'mylocaldir' dir then this is the same as: ./dirsync.sh mylocaldir myremotevm-001 ongoing
+```
+
+<br />  
 
 ## How It Works
 - The script uses `rsync` to efficiently transfer only changed files from the local directory (`LOCAL_ROOT/<dirname>`) to the remote directory (`REMOTE_ROOT/<dirname>`).
 - The remote host is accessed via SSH using the configuration in `SSH_CONF`.
 - In continuous mode, the script runs in a loop, checking for changes every `NAP_TIME` seconds.
 
+<br />  
+
 ## Troubleshooting
 - **Permission denied**: Ensure you have read/write access to both local and remote directories and that your SSH key is correctly configured.
 - **Host not found**: Verify the remote host alias in your SSH config file.
 - **Rsync errors**: Confirm that `rsync` is installed on both systems.
+
+<br />  
 
 ## Contributing
 Contributions are welcome! Please submit issues or pull requests to the repository.
