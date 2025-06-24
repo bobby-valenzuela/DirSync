@@ -36,10 +36,10 @@ Edit the `dirsync.sh` script to set the following configuration variables:
 
 ```bash
 # Path to the local root directory (must end with a slash)
-LOCAL_ROOT='/home/bobby/working/'
+LOCAL_ROOT='/home/bobby/local_dirs/'
 
 # Path to the remote root directory (must end with a slash)
-REMOTE_ROOT='/home/ubuntu/final/'
+REMOTE_ROOT='/home/ubuntu/remote_dirs/'
 
 # Time between sync checks in continuous mode (seconds)
 NAP_TIME=3
