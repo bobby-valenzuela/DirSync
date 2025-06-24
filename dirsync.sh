@@ -11,10 +11,10 @@
 # Enter your path details here:
 
 # Local dir where you want changes to be tracked and have these changes pushed out to our remote machine
-LOCAL_ROOT='/home/bobby/pbx/'
+LOCAL_ROOT='/home/bobby/local_dirs/'
 
 # Remote directory where changes are pushed out to
-REMOTE_ROOT='/home/control-io/'
+REMOTE_ROOT='/home/ubuntu/remote_dirs/'
 
 # 3 seconds per iteration
 NAP_TIME=3
