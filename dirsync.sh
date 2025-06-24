@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
 # Author : Bobby Valenzuela
-# Created : 
+# Created : 1st January 2025 
 
+# Description:
+# Synchronize a single local directory with a remote directory over SSH
 
 #############################################################################
 # =========== CONFIG ===========
