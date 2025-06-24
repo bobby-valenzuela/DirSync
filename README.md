@@ -71,7 +71,11 @@ To sync the local directory to the remote directory once:
 ./dirsync.sh mylocaldir myremotevm-001
 ```
 
-This syncs `/home/bobby/working/mylocaldir` to `/home/ubuntu/final/mylocaldir` on `myremotevm-001`.
+This syncs `/home/bobby/working/mylocaldir` to `/home/ubuntu/final/mylocaldir` on `myremotevm-001`.  
+
+<br />
+
+Thus, the files on the remote machine in `/home/ubuntu/final/mylocaldir` will now be the same as the files in `/home/bobby/working/mylocaldir` on our local host system.  
 
 <br />  
 
